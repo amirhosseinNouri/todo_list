@@ -1,25 +1,4 @@
-const items = [
-  {
-    id: 1,
-    title: "Buy a gift for Dave's birthday",
-    star: true,
-    color: "blue",
-    date: "Today",
-    time: "12:00 PM",
-    done: false,
-  },
-
-  {
-    id: 2,
-    title: "Meeting with client from xyz",
-    star: false,
-    color: "red",
-    date: "Tomorrow",
-    time: "4:00 PM",
-    done: false,
-  },
-];
-
+let items = [] ;
 
 const all_colors = {
   red : "#e84188",
@@ -30,7 +9,7 @@ const all_colors = {
  
 
 
-let nextId = 3;
+let nextId = 0;
 
 const refreshBtn = document.querySelector(".refresh");
 const title = document.querySelector("#title");
@@ -44,6 +23,7 @@ let selectedColor;
 /* Refresh tasks and render all the list again.
    Completed task wont display after refreshing. */
 const refresh = () => {
+  loadData()
   itemContainer.innerHTML = "";
   let loading = document.createElement("div");
   loading.classList.add("lds-dual-ring");
@@ -85,7 +65,8 @@ const calculateDate = (date) => {
 
 /* Gets new task's inforamtion and stores them.
    List will be rendered again. */
-const addNewTask = () => {
+const addNewTask = (event) => {
+  event.preventDefault()
   if (!title.value) {
     title.classList.add("error");
     return;
@@ -102,6 +83,7 @@ const addNewTask = () => {
 
   nextId++;
   items.push(obj);
+  saveData()
   renderItems();
   hideModal();
 };
@@ -131,9 +113,8 @@ const createElement = ({ id, title, star, color, date, time, done }) => {
 
   let colorDiv = document.createElement("div");
   colorDiv.classList.add("color");
-  console.log(all_colors[color]);
   colorDiv.style.backgroundColor = `${all_colors[color]}`;
-  console.log(colorDiv.style.backgroundColor);
+
   
   let body = document.createElement("div");
   body.classList.add("body");
@@ -187,6 +168,7 @@ const findItemNode = (el, cls) => {
 const changeDone = (id, value) => {
   let item = items.find((i) => i.id === parseInt(id));
   item.done = value;
+  saveData()
 };
 
 /* To check if task if done */
@@ -276,5 +258,19 @@ window.onclick = function (event) {
 document
   .querySelector('button[type="submit"]')
   .addEventListener("click", addNewTask);
+
+
+/* LocalStorage methods */
+
+const loadData = () =>{
+  let data =  window.localStorage.getItem("tasks")
+  if(!data) items = []
+  else items = JSON.parse(data) 
+}
+
+const saveData = () =>{
+  window.localStorage.setItem("tasks" , JSON.stringify(items))
+}
+
 
 refresh();
