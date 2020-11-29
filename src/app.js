@@ -12,17 +12,20 @@ const all_colors = {
 let nextId ;
 
 const refreshBtn = document.querySelector(".refresh");
+const refreshIcon = document.querySelector(".refresh i");
 const title = document.querySelector("#title");
 const date = document.querySelector("#date");
 const time = document.querySelector("#time");
 const colorPeak = document.querySelector(".color-peak");
 const itemContainer = document.querySelector("#item-container");
 
+
 let selectedColor;
 
 /* Refresh tasks and render all the list again.
    Completed task wont display after refreshing. */
 const refresh = () => {
+  refreshIcon.classList.add("rotate")
   loadData()
   itemContainer.innerHTML = "";
   let loading = document.createElement("div");
@@ -31,6 +34,7 @@ const refresh = () => {
   itemContainer.appendChild(loading);
 
   setTimeout(renderItems, 1000);
+  
 };
 
 refreshBtn.addEventListener("click", refresh);
@@ -97,6 +101,7 @@ const clearForm = () =>{
 
 /* Append created item to itemContainer */
 const renderItems = () => {
+  refreshIcon.classList.remove("rotate")
   itemContainer.style.justifyContent = "flex-start";
   itemContainer.innerHTML = "";
   items.forEach((item) => {
