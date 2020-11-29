@@ -19,7 +19,6 @@ const time = document.querySelector("#time");
 const colorPeak = document.querySelector(".color-peak");
 const itemContainer = document.querySelector("#item-container");
 
-
 let selectedColor;
 
 /* Refresh tasks and render all the list again.
@@ -267,12 +266,12 @@ window.onclick = function (event) {
   }
 };
 
+
+document.querySelector("#addBtn").addEventListener("click" , addNewTask)
+
 document
   .querySelector('button[type="submit"]')
   .addEventListener("submit", addNewTask);
-
-document
-  .querySelector("form").addEventListener("submit" , addNewTask)
 
 /* LocalStorage methods */
 
@@ -285,8 +284,6 @@ const loadData = () =>{
 
 const saveData = () =>{
   window.localStorage.setItem("tasks" , JSON.stringify(items))
-  console.log(items.length);
-  console.log(nextId);
 }
 
 /* Keyboard shortcut */
