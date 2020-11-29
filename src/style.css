@@ -68,12 +68,12 @@ body {
     animation: refreshAnimation 1s;
 }
 
-
 .refresh .fa-sync-alt{
     
     color: #5288FB;
     cursor: pointer;
     margin-right: 25px; 
+    
 }
 
 .item-container {
