@@ -16,9 +16,10 @@ body {
 }
 
 .container {
-    width: 350px;
+    min-width: 350px;
+    width: 30vw;
     background-color: #FFFFFF;
-    margin: 100px auto;
+    margin:60px auto;
     display: flex;
     flex-direction: column;
     border-radius: 10px;
@@ -30,7 +31,9 @@ body {
 
 @media screen and (max-width : 640px){
     .container{
-        width: 90%;
+        width: 100vw;
+        height: 100vh;
+        margin: 0px auto;
     }
 }
 
@@ -136,9 +139,16 @@ body {
 /* button */
 
 .add-button-container {
-    margin: 20px;
+    margin-right: 20px;
+    margin-bottom: 30px;
     direction: rtl;
  
+}
+
+@media screen and (max-width : 640px){
+    .add-button-container{
+        margin-bottom: 10vh;
+    }
 }
 .add-button-container div {
     display: flex;
