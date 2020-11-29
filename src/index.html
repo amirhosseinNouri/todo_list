@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo List</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="./style.css">
+    
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <div><img src="./images/Frame 1.png" alt="Frame"></div>
+            <div class="right">
+                <div class="refresh"><i class="fas fa-sync-alt"></i></div>
+                <h4>Todo</h4>
+            </div>
+            
+        </header>
+
+        <!-- Tasks will added here -->
+        <div id="item-container" class="item-container">
+           
+        </div>
+
+        <div class="add-button-container">
+            <div id="btn">+</div>
+        </div>
+
+
+        <!-- Modal -->
+        <div id="modal" class="modal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4>Add New Task</h4>
+                    <span class="close">&times;</span>
+                </div>
+                
+                <div class="modal-body">
+                    
+                    <form action="">
+                        <div class="row">              
+                            <input id="title" name="title" type="text" placeholder="Title">
+                        </div>
+
+                        <div class="row">
+                            <input type="date" name="date" id="date">
+                        </div>
+
+                        <div class="row">
+                            <input type="time" name="time" id="time">
+                        </div>
+
+                    </form>
+
+                    <div class="color-peak">
+                        
+                        <div class="color red" data-color = "red"></div>
+                        <div class="color blue" data-color = "blue"></div>
+                        <div class="color green" data-color = "green"></div>
+                        <div class="color yellow" data-color = "yellow"></div>
+                    </div>
+
+                </div>
+
+                <div class="modal-footer">
+                    <button type="submit">Add</button>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+    
+</body>
+
+<script src="./app.js"></script>
+</html>
