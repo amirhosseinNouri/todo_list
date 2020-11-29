@@ -1,2 +1,3 @@
 # todo_list
-Simple Todo list just for practice
+
+To se the result : https://todo-list.amirhosseinnr.vercel.app
