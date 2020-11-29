@@ -26,7 +26,6 @@ body {
     box-shadow: rgb(38, 57, 77 , 0.5) 15px 20px 30px -20px;
     min-height: 650px;
     border : 1px solid #ddd;
-    flex-wrap: wrap;
 }
 
 @media screen and (max-width : 640px){
@@ -34,8 +33,17 @@ body {
         width: 100vw;
         height: 100vh;
         margin: 0px auto;
-        border-radius : 0px
+        border-radius : 0px;
     }
+
+ 
+    
+}
+
+@media screen and (max-width : 350px){
+    .container{
+        min-width: 0;
+    }  
 }
 
 .container header {
@@ -89,7 +97,7 @@ body {
     justify-content: space-around;
     padding: 10px 0;
     align-items: center;
-    font-size: 13px;
+    font-size: 14px;
     border: 1px solid #eee;
     border-bottom: 3px solid #ddd;
     border-radius: 0 10px 10px 10px;
