@@ -218,7 +218,7 @@ const eventsOnStars = () => {
   document.querySelectorAll(".fa-star").forEach((star) => {
     star.addEventListener("click", (event) => {
       event.stopPropagation();
-      let item = findAncestor(event.target, "item");
+      let item = findItemNode(event.target, "item");
       let id = item.getAttribute("data-id");
 
       if (isImportante(id)) {
