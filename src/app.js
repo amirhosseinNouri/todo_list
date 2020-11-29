@@ -20,6 +20,16 @@ const items = [
   },
 ];
 
+
+const all_colors = {
+  red : "#e84188",
+  blue : "#487eb0",
+  green : "green",
+  yellow : "yellow"
+}
+ 
+
+
 let nextId = 3;
 
 const refreshBtn = document.querySelector(".refresh");
@@ -121,8 +131,10 @@ const createElement = ({ id, title, star, color, date, time, done }) => {
 
   let colorDiv = document.createElement("div");
   colorDiv.classList.add("color");
-  colorDiv.style.backgroundColor = color;
-
+  console.log(all_colors[color]);
+  colorDiv.style.backgroundColor = `${all_colors[color]}`;
+  console.log(colorDiv.style.backgroundColor);
+  
   let body = document.createElement("div");
   body.classList.add("body");
 
