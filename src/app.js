@@ -66,7 +66,7 @@ const calculateDate = (date) => {
 /* Gets new task's inforamtion and stores them.
    List will be rendered again. */
 const addNewTask = (event) => {
-  event.preventDefault()
+  event.preventDefault();
   if (!title.value) {
     title.classList.add("error");
     return;
@@ -264,8 +264,10 @@ window.onclick = function (event) {
 
 document
   .querySelector('button[type="submit"]')
-  .addEventListener("click", addNewTask);
+  .addEventListener("submit", addNewTask);
 
+document
+  .querySelector("form").addEventListener("submit" , addNewTask)
 
 /* LocalStorage methods */
 
