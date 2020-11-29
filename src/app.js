@@ -9,7 +9,7 @@ const all_colors = {
  
 
 
-let nextId = 0;
+let nextId ;
 
 const refreshBtn = document.querySelector(".refresh");
 const title = document.querySelector("#title");
@@ -82,11 +82,18 @@ const addNewTask = (event) => {
   obj.done = false;
 
   nextId++;
+  clearForm()
   items.push(obj);
   saveData()
   renderItems();
   hideModal();
 };
+
+const clearForm = () =>{
+  title.value = ""
+  date.value  =""
+  time.value = ""
+}
 
 /* Append created item to itemContainer */
 const renderItems = () => {
@@ -266,10 +273,13 @@ const loadData = () =>{
   let data =  window.localStorage.getItem("tasks")
   if(!data) items = []
   else items = JSON.parse(data) 
+  nextId = items.length
 }
 
 const saveData = () =>{
   window.localStorage.setItem("tasks" , JSON.stringify(items))
+  console.log(items.length);
+  console.log(nextId);
 }
 
 
