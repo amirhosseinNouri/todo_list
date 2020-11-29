@@ -16,15 +16,22 @@ body {
 }
 
 .container {
-    max-width: 350px;
+    width: 350px;
     background-color: #FFFFFF;
     margin: 100px auto;
     display: flex;
     flex-direction: column;
     border-radius: 10px;
     box-shadow: rgb(38, 57, 77 , 0.5) 15px 20px 30px -20px;
-    min-height: 500px;
+    min-height: 600px;
     border : 1px solid #ddd;
+    flex-wrap: wrap;
+}
+
+@media screen and (max-width : 640px){
+    .container{
+        width: 90%;
+    }
 }
 
 .container header {
@@ -48,11 +55,11 @@ body {
 
 .item-container {
     margin-top: 30px;
-    flex-basis: 350px;
     display: flex;
     flex-direction: column;
-    /* justify-content: center; */
     align-items: center; 
+    justify-self: flex-start;
+    flex: 1;
 }
 
 .color {
@@ -130,7 +137,6 @@ body {
 
 .add-button-container {
     margin: 20px;
-    flex: 1;
     direction: rtl;
  
 }
