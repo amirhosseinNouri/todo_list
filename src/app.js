@@ -289,5 +289,17 @@ const saveData = () =>{
   console.log(nextId);
 }
 
+/* Keyboard shortcut */
+const shortcutHandler = (event) =>{
+
+
+  if(event.keyCode == 78)
+    showModal()
+
+  else if (event.keyCode == 27)
+    hideModal()
+}
+
+document.addEventListener("keyup" , shortcutHandler)
 
 refresh();
