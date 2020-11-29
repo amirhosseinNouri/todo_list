@@ -3,8 +3,8 @@ let items = [] ;
 const all_colors = {
   red : "#e84188",
   blue : "#487eb0",
-  green : "green",
-  yellow : "yellow"
+  green : "#2ecc71",
+  yellow : "#f39c12"
 }
  
 
