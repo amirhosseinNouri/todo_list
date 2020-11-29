@@ -163,7 +163,6 @@ body {
 
 .modal {
 
-
     position : fixed;
     z-index: 1;
     left: 0;
@@ -177,8 +176,6 @@ body {
     display: none;
 
 }
-
-
 
 
 .show {
@@ -227,7 +224,7 @@ body {
 
 .row {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     flex-direction: row;
     align-items: center;
     margin-bottom: 15px;
@@ -256,10 +253,10 @@ body {
 
 .modal #time {
     
-    flex-basis: 100%;}
+    flex-basis: 80%;}
 
 .modal #date {
-    flex-basis: 100%;}
+    flex-basis: 80%;}
 
 .color-peak{
     display: flex;
