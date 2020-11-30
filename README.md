@@ -1,3 +1,3 @@
 # Todo list
 
-To see the final result [here](https://todo-list.amirhosseinnr.vercel.app)
+You can see the final result [here](https://todo-list.amirhosseinnr.vercel.app)
