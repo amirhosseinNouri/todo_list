@@ -1,85 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="description" content="todo list">
-    <meta name="keywords" content="todo list task">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="todo list" />
+    <meta name="keywords" content="todo list task" />
     <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"
+    />
     <title>Todo List</title>
-    <link rel="icon" type="image/png" href="./images/small_logo.png">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
-    <link rel="stylesheet" href="./style.css">
-    
-</head>
-<body>
-
+    <link rel="icon" type="image/png" href="./images/small_logo.png" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+      integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="manifest" href="../app.webmanifest" />
+    <meta name="theme-color" content="#5188FB" />
+  </head>
+  <body>
     <div class="container">
-        <header>
-            <div><img src="./images/Frame 1.png" alt="Frame"></div>
-            <div class="right">
-                <div class="refresh"><i class="fas fa-sync-alt"></i></div>
-                <h4>Todo</h4>
+      <header>
+        <div><img src="./images/Frame 1.png" alt="Frame" /></div>
+        <div class="right">
+          <div class="refresh"><i class="fas fa-sync-alt"></i></div>
+          <h4>Todo</h4>
+        </div>
+      </header>
+
+      <!-- Tasks will added here -->
+      <div id="item-container" class="item-container"></div>
+
+      <div class="add-button-container">
+        <div id="btn">+</div>
+      </div>
+
+      <!-- Modal -->
+      <div id="modal" class="modal">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4>New Todo</h4>
+            <span class="close">&times;</span>
+          </div>
+
+          <div class="modal-body">
+            <form action="">
+              <div class="row">
+                <input
+                  id="title"
+                  name="title"
+                  type="text"
+                  placeholder="Title"
+                />
+              </div>
+
+              <div class="row">
+                <label for="date">Date:</label>
+                <input type="date" name="date" id="date" placeholder="Date" />
+              </div>
+
+              <div class="row">
+                <label for="time">Time:</label>
+                <input type="time" name="time" id="time" placeholder="Time" />
+              </div>
+            </form>
+
+            <div class="color-peak">
+              <div class="color red" data-color="red"></div>
+              <div class="color blue" data-color="blue"></div>
+              <div class="color green" data-color="green"></div>
+              <div class="color yellow" data-color="yellow"></div>
             </div>
-            
-        </header>
+          </div>
 
-        <!-- Tasks will added here -->
-        <div id="item-container" class="item-container">
-           
+          <div class="modal-footer">
+            <button id="addBtn" type="submit">Add</button>
+          </div>
         </div>
-
-        <div class="add-button-container">
-            <div id="btn">+</div>
-        </div>
-
-
-        <!-- Modal -->
-        <div id="modal" class="modal">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h4>New Todo</h4>
-                    <span class="close">&times;</span>
-                </div>
-                
-                <div class="modal-body">
-                    
-                    <form action="">
-                        <div class="row">              
-                            <input id="title" name="title" type="text" placeholder="Title">
-                        </div>
-
-                        <div class="row">
-                            <label for="date">Date:</label>
-                            <input type="date" name="date" id="date" placeholder="Date">
-                        </div>
-
-                        <div class="row">
-                            <label for="time">Time:</label>
-                            <input type="time" name="time" id="time" placeholder="Time">
-                        </div>
-
-                    </form>
-
-                    <div class="color-peak">
-                        
-                        <div class="color red" data-color = "red"></div>
-                        <div class="color blue" data-color = "blue"></div>
-                        <div class="color green" data-color = "green"></div>
-                        <div class="color yellow" data-color = "yellow"></div>
-                    </div>
-
-                </div>
-
-                <div class="modal-footer">
-                    <button id="addBtn" type="submit">Add</button>
-                </div>
-            </div>
-        </div>
-        
+      </div>
     </div>
-    
-</body>
+  </body>
 
-<script src="./app.js"></script>
+  <script src="./app.js"></script>
 </html>

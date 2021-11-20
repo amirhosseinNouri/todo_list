@@ -1,0 +1,21 @@
+{
+  "name": "Todo List PWA",
+  "short_name": "Todo List",
+  "start_url": "./",
+  "orientation": "portrait",
+  "theme_color": "#5188FB",
+  "scope": "./",
+  "display": "standalone",
+  "icons": [
+    {
+      "src": "src/images/logo-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "src/images/logo-1024.png",
+      "sizes": "1024x1024",
+      "type": "image/png"
+    }
+  ]
+}
