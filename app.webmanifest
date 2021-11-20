@@ -16,6 +16,12 @@
       "src": "src/images/logo-1024.png",
       "sizes": "1024x1024",
       "type": "image/png"
+    },
+    {
+      "src": "src/images/maskable_logo.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
     }
   ]
 }
